@@ -50,7 +50,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: https://rackspace-dge8fmhtdjg8akg6.canadacentral-01.azurewebsites.net/
+      url: https://rackspace01-dge8fmhtdjg8akg6.canadacentral-01.azurewebsites.net/
     permissions:
       id-token: write #This is required for requesting the JWT
       contents: read #This is required for actions/checkout
