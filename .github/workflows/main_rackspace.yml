@@ -50,7 +50,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: https://rackspace-dge8fmhtdjg8akg6.canadacentral-01.azurewebsites.net/
     permissions:
       id-token: write #This is required for requesting the JWT
       contents: read #This is required for actions/checkout
@@ -68,9 +68,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A39C1C90553B4F75B72169864EFB6BA9 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_66EBA41436DA468EA6E6BCDAF845C1DC }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9133F0A1EA8A4A16BB3394DF0548E7BA }}
+          client-id: 6a3ab666-e250-4cbb-a994-373d670b28b0
+          tenant-id: 70721b1c-a493-48d9-9ace-453a472dc1ed
+          subscription-id: b6ad0e3f-03a0-4f46-9ce3-20a6695df64a
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
